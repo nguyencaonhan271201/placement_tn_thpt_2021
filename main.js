@@ -1,6 +1,8 @@
 let form = document.querySelector("#form");
 let result_div = document.querySelector(".result");
 
+const proxyUrl = "https://cors-anywhere.herokuapp.com/"
+
 form.addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -17,12 +19,12 @@ form.addEventListener("submit", function(e) {
         "combination": combination
     };
     xhr.open(
-        "get",
-        //"https://nodejstnthpt.herokuapp.com/get_rank/",
-        `https://nodejstnthpt.herokuapp.com/get_rank?SBD=${SBD}&fullname=${fullname}&combination=${combination}`,
+        "post",
+        "https://nodejstnthpt.herokuapp.com/get_rank/",
+        //`${proxyUrl}http://localhost:7890/get_rank?SBD=${SBD}&fullname=${fullname}&combination=${combination}`,
         true
     );
-    //xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     //xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onload = function() {
         if (xhr.status == 200) {
@@ -42,7 +44,7 @@ form.addEventListener("submit", function(e) {
             `
         }
     }
-    xhr.send();
+    xhr.send(JSON.stringify(data));
     result_div.innerHTML = `
         <p class="font-italic">Đang lấy thông tin...</p>
     `
