@@ -17,11 +17,13 @@ form.addEventListener("submit", function(e) {
         "combination": combination
     };
     xhr.open(
-        "post",
-        "https://nodejstnthpt.herokuapp.com/get_rank",
+        "get",
+        //"https://nodejstnthpt.herokuapp.com/get_rank/",
+        `http://localhost:7890/get_rank?SBD=${SBD}&fullname=${fullname}&combination=${combination}`,
         true
     );
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    //xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onload = function() {
         if (xhr.status == 200) {
             let result = JSON.parse(xhr.responseText);
@@ -40,7 +42,7 @@ form.addEventListener("submit", function(e) {
             `
         }
     }
-    xhr.send(JSON.stringify(data));
+    xhr.send();
     result_div.innerHTML = `
         <p class="font-italic">Đang lấy thông tin...</p>
     `
