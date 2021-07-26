@@ -1,0 +1,16 @@
+.container {
+    margin-top: 35px;
+}
+
+.container h1, .container h2, .container h3 {
+    font-weight: 600;
+}
+
+.error {
+    font-style: italic;
+    color: red;
+}
+
+.result {
+    height: 100px;
+}

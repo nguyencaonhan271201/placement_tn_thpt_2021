@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <link>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="style.css"></link>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Tra cứu</a>
+        </nav>
+
+        <div class="container">
+            <h1 class="text-center">Tra cứu thứ hạng theo tổ hợp</h1>
+            <h2 class="text-center">Kỳ thi Tốt nghiệp THPT 2021</h2>
+            <h3 class="text-center">Cụm thi: Thành phố Hồ Chí Minh</h3>
+            <div class="row">
+                <div class="col-md-8 col-sm-10 offset-md-2 offset-sm-1">
+                    <form action="#" method="post" id="form">
+                        <div class="form-group">
+                          <label for="SBD">Số báo danh</label>
+                          <input
+                            class="form-control" type="text" name="SBD" id="SBD" minlength="8" maxlength="8" placeholder="Số báo danh" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="SBD">Họ và tên</label>
+                            <input type="text"
+                              class="form-control" type="text" name="name" id="name" minlength="1" placeholder="Họ và tên" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="combination">Khối</label>
+                            <select class="form-select" name="combination" id="combination">
+                                <option value="A" selected>A</option>
+                                <option value="A1">A1</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D1">D1</option>
+                                <option value="D7">D7</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-info btn-block">Tra cứu</button>
+                    </form>
+                    <div class="result mt-3"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
