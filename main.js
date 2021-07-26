@@ -1,8 +1,6 @@
 let form = document.querySelector("#form");
 let result_div = document.querySelector(".result");
 
-const proxyUrl = "https://cors-anywhere.herokuapp.com/"
-
 form.addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -21,7 +19,7 @@ form.addEventListener("submit", function(e) {
     xhr.open(
         "get",
         //"https://nodejstnthpt.herokuapp.com/get_rank/",
-        `${proxyUrl}http://localhost:7890/get_rank?SBD=${SBD}&fullname=${fullname}&combination=${combination}`,
+        `https://nodejstnthpt.herokuapp.com/get_rank?SBD=${SBD}&fullname=${fullname}&combination=${combination}`,
         true
     );
     //xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
