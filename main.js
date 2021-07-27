@@ -80,7 +80,10 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     })    
 
-    document.querySelector(".image-box").addEventListener("click", function() {
-        hideImageBox();
-    })
+    let imgbox = document.querySelector(".image-box");
+    if (imgbox) {
+        imgbox.addEventListener("click", function() {
+            hideImageBox();
+        })
+    }
 })
