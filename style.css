@@ -16,6 +16,10 @@ body {
     animation-fill-mode: forwards;
 } 
 
+.paragraph p {
+    text-align: justify;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 /* body::-webkit-scrollbar {
     display: none;
